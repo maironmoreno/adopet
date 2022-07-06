@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/index.css" rel="stylesheet">
+    <link href="css/signup.css" rel="stylesheet">
     <title>Adopet</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,6 +19,7 @@
 
     <div class="header__background"></div>
     <div class="main__background"></div>
+    <div class="paws__background"></div>
 
     <header>
 
@@ -37,16 +38,27 @@
 
     <section class="main">
 
-        <img class="logo" src="source/logo-light.svg" alt="Logo adopet">
+        <img class="logo" src="source/logo.svg" alt="Logo adopet">
 
-        <h1>Boas-vindas!</h1>
-        <p>Que tal mudar sua vida adotando seu novo melhor amigo? Vem com a gente!</p>
+        <p>Ainda não tem cadastro? </p>
+        <p>Então, antes de buscar seu melhor amigo, precisamos de alguns dados:</p>
 
-        <a class="button" href="index.html">Já tenho conta</a>
-        <a class="button" href="signup.html">Quero me cadastrar</a>
+        <form class="form">
 
-        <img class="main-img" src="source/index-img.svg" alt="Imagem adopet">
+            <label for="email">Email</label>
+            <input type="email" id="email" class="input" required placeholder="Escolha seu melhor email">
+            
+            <label for="name">Nome</label>
+            <input type="text" id="name" class="input" required placeholder="Digite seu nome completo">
+            
+            <label for="password">Senha</label>
+            <input type="password" id="password" class="input password" required placeholder="Crie uma senha">
 
+            <label for="password">Confirma sua senha</label>
+            <input type="password" id="password" class="input password" required placeholder="Crie uma senha">
+            
+            <a class="button" href="index.html">Cadastrar</a>
+            
     </section>
     <footer>
         <p>2022 - Desenvolvido por Alura</p>
