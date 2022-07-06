@@ -1,0 +1,30 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 8%;
+}
+
+.header__background{
+    width: 100%;
+    height: 100%;
+    background-image: url(../source/header-background.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.header__left, .header__right {
+    display: flex;
+    align-items: center;
+}
+
+header a {
+    padding: 1rem;
+}   
+
+.main {
+    height: 195vw;
+}
