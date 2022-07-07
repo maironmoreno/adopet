@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/index.css" rel="stylesheet">
+    <link href="css/login.css" rel="stylesheet">
     <title>Adopet</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,6 +19,7 @@
 
     <div class="header__background"></div>
     <div class="main__background"></div>
+    <div class="paws__background"></div>
 
     <header>
 
@@ -31,15 +32,22 @@
 
     <section class="main">
 
-        <img class="logo" src="source/logo-light.svg" alt="Logo adopet">
+        <img class="logo" src="source/logo.svg" alt="Logo adopet">
 
-        <h1>Boas-vindas!</h1>
-        <p>Que tal mudar sua vida adotando seu novo melhor amigo? Vem com a gente!</p>
+        <p>Já tem conta? Faça seu login:</p>
+        
+        <form class="form">
 
-        <a class="button" href="index.html">Já tenho conta</a>
-        <a class="button" href="signup.html">Quero me cadastrar</a>
+            <label for="email">Email</label>
+            <input type="email" id="email" class="input" required placeholder="Escolha seu melhor email">
 
-        <img class="main-img" src="source/index-img.svg" alt="Imagem adopet">
+            <label for="password">Senha</label>
+            <input type="password" id="password" class="input password" required placeholder="Crie uma senha">
+
+            <a class="forget-password" href="#">Esquesci minha senha</a>
+            <a class="button" href="index.html">Entrar</a>
+
+        </form>
 
     </section>
     <footer>
