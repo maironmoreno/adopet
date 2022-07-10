@@ -15,14 +15,12 @@ header {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: -1;
 }
 
 .header__left, .header__right {
     display: flex;
     align-items: center;
-    z-index: 2;
-
 }
 
 header a {
