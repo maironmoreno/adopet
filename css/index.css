@@ -41,7 +41,7 @@ section p {
 .main__background{
     width: 100%;
     height: 100%;
-    background-image: url(/source/main-background-right.svg);
+    background-image: url(../source/main-background-right.svg);
     background-repeat: no-repeat;
     position: absolute;
     z-index: -1;

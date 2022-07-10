@@ -1,0 +1,85 @@
+@import url(reset.css);
+@import url(var.css);
+@import url(home.css);
+@import url(header.css);
+@import url(footer.css);
+
+body {
+    font-family: var(--font-poppins);
+}
+
+section h2 {
+    text-align: center;
+    padding-bottom: 42px;
+    color: var(--primary);
+    line-height: 21px;
+    box-sizing: border-box;
+    width: 226px;
+    height: 40px;
+    margin: 82px auto 32px auto;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin: 0 auto;
+}
+
+.card-pet {
+    z-index: -2;
+    background-color: var(--text-light);
+    display: grid;
+    column-gap: 16px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+                    "img name"
+                    "img pet-data"
+                    "img city"
+                    "img contact";
+}
+
+.img {
+    grid-area: img;
+    padding: 24px 0 24px 24px;
+}
+
+.name {
+    grid-area: name;
+    font-weight: 600;
+    line-height: 24px;
+    color: var(--primary);
+    align-self: center;
+}
+
+.pet-data {
+    grid-area: pet-data;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: var(--text-dark);
+    align-self: flex-start;
+}
+
+.city {
+    grid-area: city;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: var(--text-dark);
+    align-self: flex-end;
+}
+
+.contact {
+    grid-area: contact;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 16px;
+    color: var(--text-dark);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+}

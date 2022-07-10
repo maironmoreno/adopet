@@ -55,7 +55,7 @@ section p {
 }
 
 .password {    
-    background: var(--text-light) url(/source/hidden-icon.svg) 95% no-repeat;  
+    background: var(--text-light) url(../source/hidden-icon.svg) 95% no-repeat;  
 }
 
 .forget-password {
@@ -68,7 +68,7 @@ section p {
 .main__background{
     width: 100%;
     height: 100%;
-    background-image: url(/source/main-background-left.svg);
+    background-image: url(../source/main-background-left.svg);
     background-repeat: no-repeat;
     position: absolute;
     z-index: -1;
@@ -78,7 +78,7 @@ section p {
 .paws__background{
     width: 100%;
     height: 100%;
-    background-image: url(/source/paws-background.svg);
+    background-image: url(../source/paws-background.svg);
     background-repeat: no-repeat;
     position: absolute;
     z-index: -1;
