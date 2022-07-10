@@ -4,30 +4,17 @@ header {
     justify-content: space-between;
     padding:  48px 48px 0 48px;
     height: 40px;
-
 }
 
-.header__background{
-    width: 100%;
-    height: 100%;
-    background-image: url(../source/header-background.svg);
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-
-.header__left, .header__right {
+.header__left{
+    width: 50%;
     display: flex;
-    align-items: center;
+    justify-content: space-around;
+
 }
 
-header a {
-    padding-right: 58px;
-    justify-content: center;
-}
-
-header a:last-child {
-    padding: 0;
+.header__right {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
 }

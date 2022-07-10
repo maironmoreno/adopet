@@ -6,6 +6,9 @@
 
 body {
     font-family: var(--font-poppins);
+    background-image: url('/source/paws-background.svg'), url('/source/header-background.svg'), url('/source/main-background-left.svg');
+    background-repeat: no-repeat;
+    background-position: right top, left top, 0% 80%;
 }
 
 .main {

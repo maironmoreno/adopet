@@ -7,6 +7,9 @@
 body {
     background-color: var(--primary);
     font-family: var(--font-poppins);
+    background-image: url('/source/header-background.svg'), url('/source/main-background-right.svg');
+    background-repeat: no-repeat;
+    background-position: left top, right center;
 }
 
 .main {
@@ -38,16 +41,6 @@ section p {
     line-height: 150%;
 }
 
-.main__background{
-    width: 100%;
-    height: 100%;
-    background-image: url(../source/main-background-right.svg);
-    background-repeat: no-repeat;
-    position: absolute;
-    z-index: -1;
-    background-position-x: 100% ;
-    background-position-y: 50% ;
-}
 
 .main-img {
     z-index: -1;
