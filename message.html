@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/signup.css" rel="stylesheet">
+    <link href="css/message.css" rel="stylesheet">
     <title>Adopet</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,8 +18,6 @@
 <body>
 
     <div class="header__background"></div>
-    <div class="main__background"></div>
-    <div class="paws__background"></div>
 
     <header>
 
@@ -28,30 +26,31 @@
             <a href="login.html"><img src="source/header-contact-icon.svg" alt=""></a>
         </div>
 
+        <div class="header__right">
+            <a href="index.html"><img src="source/header-user-icon.svg" alt=""></a>
+        </div>
+
     </header>
 
     <section class="main">
 
-        <img class="logo" src="source/logo.svg" alt="Logo adopet">
-
-        <p>Ainda não tem cadastro? </p>
-        <p>Então, antes de buscar seu melhor amigo, precisamos de alguns dados:</p>
+        <p>Envie uma mensagem para a pessoa ou instituição que está cuidado do animal:</p>
 
         <form class="form">
 
-            <label for="email">Email</label>
-            <input type="email" id="email" class="input" required placeholder="Escolha seu melhor email">
-            
             <label for="name">Nome</label>
-            <input type="text" id="name" class="input" required placeholder="Digite seu nome completo">
+            <input type="text" id="name" class="input" required placeholder="Insira seu nome completo">
             
-            <label for="password">Senha</label>
-            <input type="password" id="password" class="input password" required placeholder="Crie uma senha">
-
-            <label for="password">Confirma sua senha</label>
-            <input type="password" id="password" class="input password" required placeholder="Crie uma senha">
-            
-            <a class="button" href="login.html">Cadastrar</a>
+            <label for="phone">Telefone</label>
+            <input type="tel" id="phone" class="input" required placeholder="Insira seu telefone e/ou whatsapp">
+                               
+            <label for="pet-name">Nome do animal</label>
+            <input type="text" id="pte-name" class="input" required placeholder="Por qual animal você se interessou?">
+                               
+            <label for="message">Mensagem</label>
+            <textarea rows="7" id="message" class="input" required placeholder="Escreva sua mensagem."></textarea>
+                               
+            <a class="button" href="home.html">Enviar</a>
 
         </form>
             

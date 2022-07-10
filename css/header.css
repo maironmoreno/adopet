@@ -3,6 +3,8 @@ header {
     align-items: center;
     justify-content: space-between;
     padding:  48px 48px 0 48px;
+    height: 40px;
+
 }
 
 .header__background{
@@ -13,15 +15,21 @@ header {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: 1;
 }
 
 .header__left, .header__right {
     display: flex;
     align-items: center;
+    z-index: 2;
+
 }
 
 header a {
-    padding: 0 1rem;
+    padding-right: 58px;
     justify-content: center;
+}
+
+header a:last-child {
+    padding: 0;
 }

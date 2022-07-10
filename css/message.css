@@ -1,0 +1,56 @@
+@import url(reset.css);
+@import url(var.css);
+@import url(main.css);
+@import url(header.css);
+@import url(footer.css);
+
+body {
+    font-family: var(--font-poppins);
+}
+
+.main {
+    margin: 88px auto 16px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 88%;
+}
+
+section p {
+    text-align: center;
+    margin: 0 34px 24px 34px;
+    color: var(--primary);
+    line-height: 21px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--text-light);
+    border-radius: 10px;
+    padding: 16px;
+
+}
+
+.form label {
+    font-weight: 600;
+    line-height: 26px;
+    align-self: left;
+    color: var(--primary);
+    padding-bottom: 8px;
+}
+
+.input {
+    line-height: 24px;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 16px;
+    margin-bottom: 1rem;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+    font-family: var(--font-poppins);
+}
+
+.input::placeholder {
+    color: var(--text-mid);
+    font-family: var(--font-poppins);
+}
