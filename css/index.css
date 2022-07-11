@@ -7,7 +7,7 @@
 body {
     background-color: var(--primary);
     font-family: var(--font-poppins);
-    background-image: url('/source/header-background.svg'), url('/source/main-background-right.svg');
+    background-image: url('../source/header-background.svg'), url('../source/main-background-right.svg');
     background-repeat: no-repeat;
     background-position: left top, right center;
 }

@@ -6,7 +6,7 @@
 
 body {
     font-family: var(--font-poppins);
-    background-image: url('/source/header-background.svg'), url('/source/main-background-left.svg');
+    background-image: url('../source/header-background.svg'), url('../source/main-background-left.svg');
     background-repeat: no-repeat;
     background-position: left top, 0% 80%;
 }
