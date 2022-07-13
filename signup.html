@@ -20,6 +20,8 @@
     <header>
 
         <div class="header__left">
+            
+            <img class="display-none" src="source/logo-light.svg" width="128px" height="30px" alt="">
             <a href="index.html"><img src="source/header-home-icon.svg" alt=""></a>
             <a href="login.html"><img src="source/header-contact-icon.svg" alt=""></a>
         </div>
@@ -30,16 +32,16 @@
 
         <img class="logo" src="source/logo.svg" alt="Logo adopet">
 
-        <p>Ainda não tem cadastro? </p>
-        <p>Então, antes de buscar seu melhor amigo, precisamos de alguns dados:</p>
+        <p class="main__text">Ainda não tem cadastro? </p>
+        <p class="main__text">Então, antes de buscar seu melhor amigo, precisamos de alguns dados:</p>
 
         <form class="form">
-
-            <label for="email">Email</label>
-            <input type="email" id="email" class="input" required placeholder="Escolha seu melhor email">
             
             <label for="name">Nome</label>
             <input type="text" id="name" class="input" required placeholder="Digite seu nome completo">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" class="input" required placeholder="Escolha seu melhor email">
             
             <label for="password">Senha</label>
             <input type="password" id="password" class="input password" required placeholder="Crie uma senha">
@@ -52,6 +54,7 @@
         </form>
             
     </section>
+    
     <footer>
         <p>2022 - Desenvolvido por Alura</p>
     </footer>

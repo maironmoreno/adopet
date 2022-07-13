@@ -1,6 +1,6 @@
 @import url(reset.css);
 @import url(var.css);
-@import url(main.css);
+@import url(button.css);
 @import url(header.css);
 @import url(footer.css);
 
@@ -12,11 +12,12 @@ body {
 }
 
 .main {
-    margin: 88px auto 16px auto;
+    margin: 96px auto 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 88%;
+    max-width: 88%;
+    min-height: 80vh;
 }
 
 section p {
@@ -56,4 +57,43 @@ section p {
 .input::placeholder {
     color: var(--text-mid);
     font-family: var(--font-poppins);
+}
+
+.display-none{
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+
+    body {
+        background-image: url('../source/header-background.svg'), url('../source/main-background-right.svg');
+        background-position: left top, 100% 70%;
+        background-size: 559px, 134px;
+    }
+    
+    .display-none {
+        display: inline;
+    }
+
+    .main{
+        max-width: 524px;
+    }
+
+    section p {
+        margin: 0 0 24px 0;
+    }
+}
+
+
+@media screen and (min-width: 1440px){
+    .main{
+        max-width: 552px;
+    }
+
+    section p {
+        font-size: 18px;
+        width: 492px;
+        margin: 0 auto 24px auto;
+    }
+
 }

@@ -1,6 +1,6 @@
 @import url(reset.css);
 @import url(var.css);
-@import url(main.css);
+@import url(button.css);
 @import url(header.css);
 @import url(footer.css);
 
@@ -16,7 +16,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 88%;
+    max-width: 88%;
 }
 .text-introduction {
     text-align: center;
@@ -76,4 +76,32 @@ body {
 
 .input::placeholder {
     font-family: var(--font-poppins);
+}
+
+.display-none{
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+
+    body {
+        background-image: url('../source/header-background.svg'), url('../source/main-background-right.svg');
+        background-position: left top, 100% 70%;
+        background-size: 559px, 134px;
+    }
+        
+    .display-none {
+        display: inline;
+    }
+
+    .main{
+        margin: 150px auto 32px auto;
+        max-width: 524px;
+    }
+
+    .text-introduction{
+        margin: 0 auto;
+        font-size: 18px;
+        margin: 0 0 24px 0;
+    }    
 }

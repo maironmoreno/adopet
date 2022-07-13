@@ -1,6 +1,6 @@
 @import url(reset.css);
 @import url(var.css);
-@import url(main.css);
+@import url(button.css);
 @import url(header.css);
 @import url(footer.css);
 
@@ -13,11 +13,11 @@ body {
 }
 
 .main {
-    margin: 6.125rem auto 0 auto;
-    width: 250px;
+    margin: 4.7rem auto 0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
+    min-height: 80vh;
     color: var(--white);
 }
 
@@ -26,25 +26,89 @@ body {
     margin: 0 auto 24px auto;
 }
 
-section h1 {
+.main__title {
     font-family: var(--font-ibm);
     font-weight: 500;
     font-size: 26px;
     align-self: center;
-    padding: 10px 0;
+    line-height: 48px;
     margin: 0 auto 24px auto;
 }
 
-section p {
+.main__text {
+    margin: 0 auto 24px auto;
+    max-width: 270px;
     text-align: center;
     padding-bottom: 1rem;
-    line-height: 150%;
+    line-height: 24px;
 }
-
 
 .main-img {
     z-index: -1;
     position: relative;
-    top: 20px;
-    left: -25px;
+    top: 25px;
+    left: -20px;
+    margin: 0 auto;
+}
+
+.display-none, .main__text--tablet {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        background-size: 559px, 134px;
+    }
+    
+    .display-none, .main__text--tablet {
+        display: inline;
+    }
+
+    .main__text--mobile {
+        display: none;
+    }
+
+    .main {
+        margin: 0 auto;
+        min-height: 83vh;
+    }
+    
+    .logo{
+        width: 251px;
+        margin: 0 auto 40px auto;
+    }
+
+    .main__title{
+        font-size: 28px;
+    }
+
+    .main__text {
+        max-width: 353px;
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .button {
+        width: 334px;
+        height: 48px;
+    }
+        
+}
+
+@media screen and (min-width: 1440px){
+
+    .main {
+        min-height: 85vh;
+    }
+    
+    .main__text {
+        max-width: 488px;
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .button {
+        width: 362px;
+    }
+
 }

@@ -1,0 +1,17 @@
+.button {
+    margin: 8px auto;
+    box-sizing: border-box;
+    background-color: var(--tertiary);
+    color: var(--white);
+
+    width: 180px;
+    height: 40px;
+
+    text-align: center;
+    font-weight: 600;
+
+    border-radius: 6px;
+
+    line-height: 40px;
+
+}

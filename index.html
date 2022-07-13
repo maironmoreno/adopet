@@ -1,44 +1,55 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/index.css" rel="stylesheet">
+    <title>Adopet</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles.css">
-    <title>AdoPet - Página Inicial</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Poppins:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
 </head>
 
+<body>
 
-<body class="inicial">
-    <header class="cabecalho">
-        <img src="./img/Logo.png" alt="Logo da adopet" class="cabecalho__imagem cabecalho__imagem-logo">
-        <a href="./pages/login/login.html"><img src="./img/Casa.svg" alt="Página inicial" class="cabecalho__imagem"></a>
-        <a href="./pages/mensagem/mensagem.html"> <img src="./img/Mensagens.svg" alt="Caixa de mensagens"
-                class="cabecalho__imagem"></a>
+    <header>
+
+        <div class="header__left">
+            
+            <img class="display-none" src="source/logo-light.svg" width="128px" height="30px" alt="">
+            <a href="index.html"><img src="source/header-home-icon.svg" alt=""></a>
+            <a href="login.html"><img src="source/header-contact-icon.svg" alt=""></a>
+        </div>
+
     </header>
 
-    <section class="pagina-inicial">
-        <img src="./img/Logo.png" alt="Logo da adopet">
-        <h1 class="pagina-inicial__titulo">Boas vindas!</h1>
-        <p class="pagina-inicial__texto">Que tal mudar sua vida adotando seu novo melhor amigo? Vem com a gente!</p>
+    <section class="main">
 
-        <ul class="botoes">
-            <li class="botoes__item"><a href="./pages/login/login.html">Já tenho conta</a></li>
-            <li class="botoes__item"><a href="./pages/cadastro/cadastro.html">Quero me cadastrar</a></li>
-        </ul>
+        <img class="logo" src="source/logo-light.svg" alt="Logo adopet">
+
+        <h1 class="main__title">Boas-vindas!</h1>
+        
+        <p class="main__text main__text--mobile">Que tal mudar sua vida adotando seu novo melhor amigo? Vem com a gente!</p>
+
+        <p class="main__text main__text--tablet">Adotar pode mudar uma vida. Que tal buscar seu novo melhor amigo hoje? Vem com a gente!</p>
+
+        <a class="button" href="login.html">Já tenho conta</a>
+        <a class="button" href="signup.html">Quero me cadastrar</a>
+
+        <img class="main-img" src="source/index-img.svg" height="312px" width="248" alt="Cão e gato">
+        
 
     </section>
-
-    <footer class="rodape">
-        <p>2022 - Desenvolvido por Alura.</p>
+    
+    <footer>
+        <p>2022 - Desenvolvido por Alura</p>
     </footer>
+
 </body>
-
-
 
 </html>

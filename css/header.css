@@ -7,14 +7,20 @@ header {
 }
 
 .header__left{
+    min-width: 137px;
     width: 50%;
+    max-width: 400px;
     display: flex;
     justify-content: space-around;
-
+    align-items: center;
+    
 }
 
 .header__right {
+    min-width: 137px;
     width: 50%;
     display: flex;
     justify-content: flex-end;
 }
+
+
