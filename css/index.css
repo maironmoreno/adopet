@@ -4,6 +4,33 @@
 @import url(header.css);
 @import url(footer.css);
 
+
+/*  codigo necessário para fixar o footer no fim da pagina */
+* {
+	margin: 0;
+}
+
+html, body {
+    min-height: 875px;
+	height: 100%;
+}
+
+.page-wrap {
+    min-height: 100%;
+    /* equal to footer height */
+      margin-bottom: -104px; 
+      position: relative;
+
+  }
+
+.page-wrap:after {
+   content: "";
+   display: block;
+   height: 104px;
+}
+
+/* fim do posicionamento do footer */
+
 body {
     background-color: var(--primary);
     font-family: var(--font-poppins);
@@ -13,11 +40,8 @@ body {
 }
 
 .main {
-    margin: 4.7rem auto 0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    min-height: 80vh;
     color: var(--white);
 }
 
@@ -32,23 +56,23 @@ body {
     font-size: 26px;
     align-self: center;
     line-height: 48px;
-    margin: 0 auto 24px auto;
+    margin: 0 auto 16px auto;
 }
 
 .main__text {
-    margin: 0 auto 24px auto;
+    margin: 0 auto 16px auto;
     max-width: 270px;
     text-align: center;
-    padding-bottom: 1rem;
     line-height: 24px;
 }
 
 .main-img {
+    /* img fixa no fim do page-warp para se ajustar a pagina */
     z-index: -1;
-    position: relative;
-    top: 25px;
-    left: -20px;
-    margin: 0 auto;
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    margin-left: -150px;
 }
 
 .display-none, .main__text--tablet {
@@ -58,6 +82,7 @@ body {
 @media screen and (min-width: 768px) {
     body {
         background-size: 559px, 134px;
+        min-height: 1080px;
     }
     
     .display-none, .main__text--tablet {
@@ -67,11 +92,6 @@ body {
     .main__text--mobile {
         display: none;
     }
-
-    .main {
-        margin: 0 auto;
-        min-height: 83vh;
-    }
     
     .logo{
         width: 251px;
@@ -80,17 +100,25 @@ body {
 
     .main__title{
         font-size: 28px;
+        margin: 0 auto 24px auto;
+
     }
 
     .main__text {
         max-width: 353px;
         font-size: 18px;
         line-height: 26px;
+        margin: 0 auto 30px auto;
     }
 
     .button {
         width: 334px;
         height: 48px;
+    }
+
+    .main-img{
+        width: 338px;    
+        margin-left: -182px;
     }
         
 }
@@ -112,3 +140,6 @@ body {
     }
 
 }
+
+
+
