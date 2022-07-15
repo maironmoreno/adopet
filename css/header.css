@@ -2,22 +2,19 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding:  48px;
+    padding:  48px 48px 70px 48px;
     height: 40px;
 }
 
 .header__left{
-    min-width: 137px;
     width: 50%;
-    max-width: 400px;
+    max-width: 266px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    
 }
 
 .header__right {
-    min-width: 137px;
     width: 50%;
     display: flex;
     justify-content: flex-end;
@@ -25,6 +22,23 @@ header {
 
 @media screen and (min-width: 768px) {
     header {
-        padding:  52px 42px 180px 52px;
+        padding:  52px 52px 124px 52px;
     }
+}
+
+@media screen and (min-width: 1440px) {
+    header {
+        padding:  52px 52px 40px 52px;
+    }
+
+    .header__left{
+        justify-content: space-evenly;
+        max-width: 400px;
+    }
+    .header__right {
+        width: 20%;
+        display: flex;
+        justify-content: center;
+    }
+
 }

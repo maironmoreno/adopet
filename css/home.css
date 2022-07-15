@@ -4,6 +4,32 @@
 @import url(header.css);
 @import url(footer.css);
 
+/*  codigo necessário para fixar o footer no fim da pagina */
+* {
+	margin: 0;
+}
+
+html, body {
+    min-height: 845px;
+	height: 100%;
+}
+
+.page-wrap {
+    min-height: 100%;
+    /* equal to footer height */
+      margin-bottom: -104px; 
+      position: relative;
+
+  }
+
+.page-wrap:after {
+   content: "";
+   display: block;
+   height: 104px;
+}
+
+/* fim do posicionamento do footer */
+
 body {
     font-family: var(--font-poppins);
     background-image: url('../source/header-background.svg');
@@ -11,22 +37,23 @@ body {
     background-position:left top;
 }
 
-.main{
-    margin: 82px auto 0 auto;
-    min-height: 80vh;
+.main {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding-bottom: 16px;
 }
 
-.text-main {
+.main__text {
     text-align: center;
     color: var(--primary);
     line-height: 21px;
-    box-sizing: border-box;
-    width: 226px;
-    height: 40px;
-    margin: 0 auto 32px auto;
+    max-width: 226px;
+    margin: 0 auto;
 }
 
 .pets-list {
+    padding-top: 32px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -93,23 +120,27 @@ body {
 }
 
 
-.display-none{
+.display-none, .main__text--tablet{
     display: none;
 }
 
-
 @media screen and (min-width: 768px) {
+    
     body {
-        background-size: 559px, 134px;
+        background-size: 559px, 117px;
     }
     
     .display-none {
         display: block;
     }
 
+    .main__text {
+        max-width: 400px;
+    }
+
     .main{
-        margin: 170px auto 32px auto;
         max-width: 768px;
+        padding-top: 80px;
     }
 
     .card-pet{
@@ -120,11 +151,8 @@ body {
         display: none;
     }
 
-    .text-main--tablet{
+    .main__text--tablet{
         font-size: 18px;
-        width: auto;
-        height: auto;
-        padding: 0;
     }
 
 }
@@ -137,9 +165,14 @@ body {
         background-position: left top, right center;
     }
 
+    .main__text {
+        max-width: 100%;
+    }
+
     .main{
         max-width: 1100px;
         min-height: 68vh;
+        padding-top: 36px;
     }
 
     .mobile{
@@ -147,11 +180,7 @@ body {
         width: auto;
     }
 
-    .display-none {
-        display: none;
-    }
-
-    .text-main {
+    .main__text {
         font-size: 18px;
     }
 

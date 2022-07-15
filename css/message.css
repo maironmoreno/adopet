@@ -4,6 +4,31 @@
 @import url(header.css);
 @import url(footer.css);
 
+/*  codigo necessário para fixar o footer no fim da pagina */
+* {
+	margin: 0;
+}
+
+html, body {
+    min-height: 845px;
+	height: 100%;
+}
+
+.page-wrap {
+    min-height: 100%;
+    /* equal to footer height */
+      margin-bottom: -104px; 
+      position: relative;
+  }
+
+.page-wrap:after {
+   content: "";
+   display: block;
+   height: 104px;
+}
+
+/* fim do posicionamento do footer */
+
 body {
     font-family: var(--font-poppins);
     background-image: url('../source/header-background.svg');
@@ -12,19 +37,19 @@ body {
 }
 
 .main {
-    margin: 96px auto 0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    max-width: 88%;
-    min-height: 80vh;
+    margin: 0 auto;
+    padding: 24px 0;
 }
 
-section p {
+.main__text {
     text-align: center;
-    margin: 0 34px 24px 34px;
     color: var(--primary);
-    line-height: 21px;
+    line-height: 20px;
+    margin: 0 auto;
+    padding-bottom: 24px;
+    max-width: 226px;
 }
 
 .form {
@@ -32,7 +57,10 @@ section p {
     flex-direction: column;
     background-color: var(--text-light);
     border-radius: 10px;
-    padding: 16px;
+    width: 70%;
+    max-width: 280px;
+    margin: 0 auto;
+    padding: 24px;
 
 }
 
@@ -67,33 +95,35 @@ section p {
 
     body {
         background-image: url('../source/header-background.svg'), url('../source/main-background-right.svg');
-        background-position: left top, 100% 70%;
-        background-size: 559px, 134px;
+        background-position: left top, 100% 50%;
+        background-size: 559px, 117px;
+    }
+
+    .main__text {
+        padding-top: 24px;
+        line-height: 26px;
+        font-size: 18px;
+        margin: 0 auto 24px auto;
+        max-width: 524px;
     }
     
     .display-none {
         display: inline;
     }
 
-    .main{
+    .form {
         max-width: 524px;
     }
 
-    section p {
-        margin: 0 0 24px 0;
-    }
 }
 
-
 @media screen and (min-width: 1440px){
-    .main{
+
+    .form {
         max-width: 552px;
     }
 
-    section p {
-        font-size: 18px;
-        width: 492px;
-        margin: 0 auto 24px auto;
+    .main__text {
+        margin: 0 auto;
     }
-
 }

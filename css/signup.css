@@ -4,18 +4,42 @@
 @import url(header.css);
 @import url(footer.css);
 
+/*  codigo necessário para fixar o footer no fim da pagina */
+* {
+	margin: 0;
+}
+
+html, body {
+    min-height: 845px;
+	height: 100%;
+}
+
+.page-wrap {
+    min-height: 100%;
+    /* equal to footer height */
+      margin-bottom: -104px; 
+      position: relative;
+
+  }
+
+.page-wrap:after {
+   content: "";
+   display: block;
+   height: 104px;
+}
+
+/* fim do posicionamento do footer */
+
 body {
     font-family: var(--font-poppins);
     background-image: url('../source/paws-background.svg'), url('../source/header-background.svg'), url('../source/main-background-left.svg');
     background-repeat: no-repeat;
-    background-position: right top, left top, 0% 80%;
+    background-position: right top, left top, 0% 70%;
 }
 
 .main {
-    margin: 86px auto 32px auto;
     display: flex;
     flex-direction: column;
-    min-height: 72vh;
 }
 
 .logo{
@@ -25,37 +49,38 @@ body {
 
 .main__text {
     text-align: center;
-    padding-bottom: 1rem;
+    padding-bottom: 8px;
     color: var(--primary);
     line-height: 21px;
-    max-width: 320px;
+    max-width: 312px;
     margin: 0 auto;
 }
 
 .form {
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
-    width: 90%;
-    max-width: 320px;
+    padding-top: 16px;
 }
 
 .form label {
-    line-height: 25px;
+    line-height: 24px;
     align-self: center;
     color: var(--text-dark);
     padding-bottom: 4px;
 }
 
 .input {
+    height: 38px;
     background-color: var(--text-light);
-    line-height: 40px;
+    line-height: 16px;
     text-align: center;
     font-size: 12px;
     border: none;
     border-radius: 4px;
-    margin-bottom: 20px;
+    margin: 0 auto 20px auto;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 312px;
 }
 
 .input::placeholder {
@@ -73,21 +98,19 @@ body {
 @media screen and (min-width: 768px) {
     body {
         background-image: url('../source/paws-background.svg'), url('../source/header-background.svg'), url('../source/main-background-right.svg');
-        background-position: right top, left top, 100% 70%;
-        background-size: 233px, 559px, 134px;
+        background-position: right top, left top, 100% 50%;
+        background-size: 233px, 559px, 117px;
     }
     
     .display-none{
         display: inline;
     }
-    
-    .main {
-        margin: 161px auto 0 auto;
-        min-height: 75vh;
-    }
 
     .main__text{
         padding-bottom: 0;
+        font-size: 18px;
+        line-height: 26px;
+        max-width: 525px;
     }
 
     .logo{
@@ -95,16 +118,16 @@ body {
         margin: 0 auto 40px auto;
     }
 
-    .form {
-        margin: 40px auto;
-    }
-
     .form label {
         padding-bottom: 8px;
+        font-size: 18px;
+        line-height: 24px;
     }
 
     .input {
-        margin-bottom: 24px;
+        max-width: 344px;
+        height: 40px;
+        margin: 0 auto 24px auto;
     }
     .button {
         margin: 16px auto;
@@ -112,17 +135,16 @@ body {
 }
 
 @media screen and (min-width: 1440px){
-    .main__text{
-        max-width: 500px;
+    .form{
+        padding-top: 48px;
     }
 
-    .form{
+    .input{
         max-width: 552px;
+        margin: 0 auto 24px auto;
     }
-    
+   
     .password{
         width: 362px;
-        margin: 0 auto 24px auto;
-
     }
 }

@@ -4,6 +4,31 @@
 @import url(header.css);
 @import url(footer.css);
 
+/*  codigo necessário para fixar o footer no fim da pagina */
+* {
+	margin: 0;
+}
+
+html, body {
+    min-height: 845px;
+	height: 100%;
+}
+
+.page-wrap {
+    min-height: 100%;
+    /* equal to footer height */
+      margin-bottom: -104px; 
+      position: relative;
+  }
+
+.page-wrap:after {
+   content: "";
+   display: block;
+   height: 104px;
+}
+
+/* fim do posicionamento do footer */
+
 body {
     font-family: var(--font-poppins);
     background-image: url('../source/header-background.svg');
@@ -12,17 +37,30 @@ body {
 }
 
 .main {
-    margin: 88px auto 16px auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    max-width: 88%;
+    margin: 0 auto;
+    padding: 24px 0;
 }
-.text-introduction {
+
+.main__text {
     text-align: center;
-    margin: 0 34px 24px 34px;
     color: var(--primary);
-    line-height: 21px;
+    line-height: 20px;
+    margin: 0 auto;
+    padding-bottom: 24px;
+    max-width: 250px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--text-light);
+    border-radius: 10px;
+    width: 70%;
+    max-width: 280px;
+    margin: 0 auto;
+    padding: 24px;
 }
 
 .text-profile {
@@ -31,21 +69,13 @@ body {
     color: var(--text-dark);
     line-height: 24px;
     font-weight: 600;
-    margin: 32px auto 16px auto;
+    margin: 8px auto 16px auto;
 }
 
-.form {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--text-light);
-    border-radius: 10px;
-    padding: 16px;
-
-}
 
 .form label {
     font-weight: 600;
-    line-height: 26px;
+    line-height: 24px;
     align-self: left;
     color: var(--primary);
     padding-bottom: 8px;
@@ -74,6 +104,10 @@ body {
     font-family: var(--font-poppins);
 }
 
+.input--about{
+    height: 152px;
+}
+
 .input::placeholder {
     font-family: var(--font-poppins);
 }
@@ -86,22 +120,43 @@ body {
 
     body {
         background-image: url('../source/header-background.svg'), url('../source/main-background-right.svg');
-        background-position: left top, 100% 70%;
-        background-size: 559px, 134px;
+        background-position: left top, 100% 50%;
+        background-size: 559px, 117px;
     }
         
     .display-none {
         display: inline;
     }
 
-    .main{
-        margin: 150px auto 32px auto;
+    .main__text {
+        padding-top: 24px;
+        line-height: 26px;
+        font-size: 18px;
+        margin: 0 auto 24px auto;
+        max-width: 524px;
+    }
+    
+    .display-none {
+        display: inline;
+    }
+
+    .form {
         max-width: 524px;
     }
 
-    .text-introduction{
+    .input--about{
+        height: 80px;
+    }
+
+}
+
+
+@media screen and (min-width: 1440px){
+    .form {
+        max-width: 552px;
+    }
+
+    .main__text {
         margin: 0 auto;
-        font-size: 18px;
-        margin: 0 0 24px 0;
-    }    
+    }
 }

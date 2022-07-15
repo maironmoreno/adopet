@@ -79,10 +79,13 @@ body {
     display: none;
 }
 
+.button{
+    width: 180px;
+}
+
 @media screen and (min-width: 768px) {
     body {
-        background-size: 559px, 134px;
-        min-height: 1080px;
+        background-size: 559px, 117px;
     }
     
     .display-none, .main__text--tablet {
@@ -124,11 +127,7 @@ body {
 }
 
 @media screen and (min-width: 1440px){
-
-    .main {
-        min-height: 85vh;
-    }
-    
+   
     .main__text {
         max-width: 488px;
         font-size: 18px;

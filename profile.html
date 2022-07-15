@@ -10,10 +10,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
+
+    <div class="page-wrap">
 
     <header>
 
@@ -31,7 +32,7 @@
 
     <section class="main">
 
-        <p class="text-introduction">Esse é o perfil que aparece para responsáveis ou ONGs que recebem sua mensagem.</p>
+        <p class="main__text">Esse é o perfil que aparece para responsáveis ou ONGs que recebem sua mensagem.</p>
 
         <form class="form">
 
@@ -51,16 +52,19 @@
             <input type="text" id="cidade" class="input" required placeholder="São Paulo">
                                
             <label for="about">Sobre</label>
-            <textarea rows="5" id="message" class="input" required placeholder="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati."></textarea>
+            <textarea id="message" class="input input--about" required placeholder="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati."></textarea>
                                
             <a class="button" href="index.html">Salvar</a>
 
         </form>
             
     </section>
-    <footer>
-        <p>2022 - Desenvolvido por Alura</p>
-    </footer>
+
+</div>
+    
+<footer class="site-footer">
+    <p>2022 - Desenvolvido por Alura</p>
+</footer>
 
 </body>
 
